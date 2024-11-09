@@ -21,9 +21,17 @@ public class Main {
         products.add(new Product("9", "candy",355.9));
         products.add(new Product("10", "crackers",12.1));
 
-        List<Product> filterProductPrice = products.stream().filter(e -> e.getPrice() > 200.0).toList();
-        List<Product> filterProductName = products.stream().filter(e -> e.getName().startsWith("c") || e.getName().startsWith("C")).toList();
-        List<Product> filterProduct = products.stream().filter(e -> e.getPrice() == 100.0).toList();
+        List<Product> filterProductPrice = products.stream()
+                .filter(e -> e.getPrice() > 200.0)
+                .toList();
+
+        List<Product> filterProductName = products.stream()
+                .filter(e -> e.getName().startsWith("c") || e.getName().startsWith("C"))
+                .toList();
+
+        List<Product> filterProduct = products.stream()
+                .filter(e -> e.getPrice() == 100.0)
+                .toList();
 
 //        filterProductPrice.forEach(product -> System.out.println(product));
 //        filterProductName.forEach(product -> System.out.println(product));
